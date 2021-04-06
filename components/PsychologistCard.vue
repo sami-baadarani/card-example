@@ -110,7 +110,7 @@ export default {
     height: 40px;
     width: 40px;
     top: 87px;
-    right: 50px;
+    left: 55%;
   }
 
   &__name {
