@@ -15,10 +15,21 @@
             v-for="(t, index) in availability.times"
             :key="_uid + index"
           >
-            <div class="session-time" :class="{ 'session-extra': t.extra }">
+            <button
+              v-if="showTime(index)"
+              class="btn-styling session-time"
+              :class="{ 'session-extra': t.extra }"
+            >
               {{ t.time }}
               <span v-if="t.extra"> ({{ t.extra }})</span>
-            </div>
+            </button>
+            <button
+              @click="hideTimes = false"
+              class="btn-styling show-more-btn"
+              v-else-if="index === 5"
+            >
+              Show more
+            </button>
           </b-col>
         </b-row>
       </b-container>
@@ -31,7 +42,7 @@ import PlayIcon from 'assets/icons/play_circle_filled_24dp.svg'
 export default {
   name: 'Card',
   data: () => ({
-    showMore: false,
+    hideTimes: true,
     PlayIcon
   }),
   props: {
@@ -67,15 +78,19 @@ export default {
       }
     }
   },
-  mounted() {
-    console.log(this._uid)
-  },
   computed: {
     DisplayNextSession() {
       if (this.availability.nextSession) {
         return `Next sessions on ${this.availability.nextSession}`
       }
       return 'There are no sessions available at the moment'
+    }
+  },
+  methods: {
+    showTime(index) {
+      if (index < 5 || !this.hideTimes) {
+        return true
+      }
     }
   }
 }
@@ -135,6 +150,15 @@ export default {
       padding-right: 5px;
       padding-left: 5px;
 
+      .btn-styling {
+        font-family: inherit;
+        border: 0;
+        padding: 0;
+        background: none;
+        display: block;
+        width: 100%;
+      }
+
       .session-time {
         font-size: 12px;
         background: $primary;
@@ -142,6 +166,10 @@ export default {
         border-radius: 5px;
         margin-bottom: 4px;
         color: $white;
+
+        &:hover {
+          background: $secondary;
+        }
 
         &.session-extra {
           background: $secondary;
@@ -151,6 +179,19 @@ export default {
           span {
             display: block;
           }
+
+          &:hover {
+            background: $primary-alt;
+          }
+        }
+      }
+
+      .show-more-btn {
+        color: $primary;
+        font-size: 11px;
+
+        &:hover {
+          color: $secondary;
         }
       }
     }
