@@ -11,6 +11,10 @@
           v-for="(data, index) in tempData"
           :key="_uid + index"
           class="card-column"
+          lg="3"
+          md="4"
+          sm="6"
+          xs="12"
         >
           <card
             :avatarSrc="data.avatarSrc"

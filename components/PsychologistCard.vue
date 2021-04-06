@@ -95,8 +95,6 @@ export default {
 .card {
   border: 1px $grey solid;
   min-height: 350px;
-  //todo remove width
-  width: 200px;
   position: relative;
   text-align: center;
   padding: 4px;
