@@ -1,7 +1,7 @@
 const tempData = [
   {
     avatarSrc: 'https://i.pravatar.cc/',
-    name: 'Psychologist Name',
+    name: 'James Smith',
     expertise: 'Clinical psychologist',
     intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt.`,
     availability: {
@@ -19,11 +19,11 @@ const tempData = [
   },
   {
     avatarSrc: 'https://i.pravatar.cc/',
-    name: 'Psychologist Name',
-    expertise: 'Clinical psychologist',
+    name: 'Mary Johnson',
+    expertise: 'Military psychologist',
     intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt.`,
     availability: {
-      nextSession: 'Tuesday 6th Apr',
+      nextSession: 'Thursday 8th Apr',
       times: [
         { time: '8am', extra: '+$25' },
         { time: '9am' },
@@ -37,11 +37,11 @@ const tempData = [
   },
   {
     avatarSrc: 'https://i.pravatar.cc/',
-    name: 'Psychologist Name',
-    expertise: 'Clinical psychologist',
+    name: 'John Williams',
+    expertise: 'Child psychologist',
     intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt.`,
     availability: {
-      nextSession: 'Tuesday 6th Apr',
+      nextSession: 'Thursday 8th Apr',
       times: [
         { time: '8am', extra: '+$25' },
         { time: '9am' },
@@ -55,11 +55,11 @@ const tempData = [
   },
   {
     avatarSrc: 'https://i.pravatar.cc/',
-    name: 'Psychologist Name',
-    expertise: 'Clinical psychologist',
+    name: 'Patricia Brown',
+    expertise: 'Forensic psychologist',
     intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt.`,
     availability: {
-      nextSession: 'Tuesday 6th Apr',
+      nextSession: 'Friday 9th Apr',
       times: [
         { time: '8am', extra: '+$25' },
         { time: '9am' },
@@ -73,11 +73,11 @@ const tempData = [
   },
   {
     avatarSrc: 'https://i.pravatar.cc/',
-    name: 'Psychologist Name',
-    expertise: 'Clinical psychologist',
+    name: 'Robert Jones',
+    expertise: 'Organizational psychologist',
     intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt.`,
     availability: {
-      nextSession: 'Tuesday 6th Apr',
+      nextSession: 'Monday 12th Apr',
       times: [
         { time: '8am', extra: '+$25' },
         { time: '9am' },

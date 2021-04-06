@@ -95,6 +95,7 @@ export default {
 .card {
   border: 1px $grey solid;
   min-height: 350px;
+  height: 100%;
   position: relative;
   text-align: center;
   padding: 4px;
@@ -181,6 +182,7 @@ export default {
       .show-more-btn {
         color: $primary;
         font-size: 11px;
+        height: 100%;
 
         &:hover {
           color: $secondary;
