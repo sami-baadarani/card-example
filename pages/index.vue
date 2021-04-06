@@ -1,18 +1,31 @@
 <template>
   <section class="page__main">
-    <b-container>
+    <b-container class="main-container">
       <b-row>
-        <b-col> </b-col>
+        <b-col>
+          <h3>Psychologists available</h3>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          <card />
+        </b-col>
       </b-row>
     </b-container>
   </section>
 </template>
 
 <script>
-export default {}
+import Card from '@/components/PsychologistCard'
+export default {
+  components: { Card },
+}
 </script>
 
 <style lang="scss" scoped>
 .page__main {
+  .main-container {
+    margin-top: 3rem;
+  }
 }
 </style>
