@@ -7,7 +7,6 @@
     <p class="card__intro">{{ intro }}</p>
     <section class="card__sessions">
       <p class="next-session">{{ DisplayNextSession }}</p>
-
       <b-container
         ><b-row>
           <b-col
@@ -16,7 +15,10 @@
             v-for="(t, index) in availability.times"
             :key="_uid + index"
           >
-            <div class="session-time">{{ t.time }}</div>
+            <div class="session-time" :class="{ 'session-extra': t.extra }">
+              {{ t.time }}
+              <span v-if="t.extra"> ({{ t.extra }})</span>
+            </div>
           </b-col>
         </b-row>
       </b-container>
@@ -136,9 +138,20 @@ export default {
       .session-time {
         font-size: 12px;
         background: $primary;
-        padding: 5px 0;
+        padding: 7px 0;
         border-radius: 5px;
         margin-bottom: 4px;
+        color: $white;
+
+        &.session-extra {
+          background: $secondary;
+          padding: 1px 0;
+          font-size: 10px;
+
+          span {
+            display: block;
+          }
+        }
       }
     }
   }
