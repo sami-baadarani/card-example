@@ -1,11 +1,16 @@
 <template>
   <div class="card">
-    <img :src="avatarSrc" alt="profile image" class="card__img" />
-    <img class="img__icon" :src="PlayIcon" alt="play button" />
-    <p class="card__name">{{ name }}</p>
-    <p class="card__expertise">{{ expertise }}</p>
-    <p class="card__intro">{{ intro }}</p>
-    <section class="card__sessions">
+    <img
+      v-if="avatarSrc"
+      :src="avatarSrc"
+      alt="profile image"
+      class="card__img"
+    />
+    <img v-if="avatarSrc" class="img__icon" :src="PlayIcon" alt="play button" />
+    <p v-if="name" class="card__name">{{ name }}</p>
+    <p v-if="expertise" class="card__expertise">{{ expertise }}</p>
+    <p v-if="intro" class="card__intro">{{ intro }}</p>
+    <section v-if="availability" class="card__sessions">
       <p class="next-session">{{ DisplayNextSession }}</p>
       <b-container
         ><b-row>
@@ -48,34 +53,23 @@ export default {
   props: {
     avatarSrc: {
       type: String,
-      default: 'https://i.pravatar.cc/'
+      default: null
     },
     name: {
       type: String,
-      default: 'Psychologist Name'
+      default: null
     },
     expertise: {
       type: String,
-      default: 'Clinical psychologist'
+      default: null
     },
     intro: {
       type: String,
-      default: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt.`
+      default: null
     },
     availability: {
       type: Object,
-      default: {
-        nextSession: 'Tuesday 6th Apr',
-        times: [
-          { time: '8am', extra: '+$25' },
-          { time: '9am' },
-          { time: '10am' },
-          { time: '11:30am' },
-          { time: '12:30am' },
-          { time: '1:00pm' },
-          { time: '2:00pm' }
-        ]
-      }
+      default: null
     }
   },
   computed: {

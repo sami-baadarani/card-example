@@ -7,8 +7,18 @@
         </b-col>
       </b-row>
       <b-row>
-        <b-col v-for="(data, index) in tempData" :key="_uid + index">
-          <card />
+        <b-col
+          v-for="(data, index) in tempData"
+          :key="_uid + index"
+          class="card-column"
+        >
+          <card
+            :avatarSrc="data.avatarSrc"
+            :name="data.name"
+            :expertise="data.expertise"
+            :intro="data.intro"
+            :availability="data.availability"
+          />
         </b-col>
       </b-row>
     </b-container>
@@ -33,6 +43,10 @@ export default {
     margin-top: 3rem;
 
     h3 {
+      margin-bottom: 24px;
+    }
+
+    .card-column {
       margin-bottom: 24px;
     }
   }
