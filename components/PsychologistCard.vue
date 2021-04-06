@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import PlayIcon from '~/assets/icons/play_circle_filled_black_24dp.svg'
+import PlayIcon from 'assets/icons/play_circle_filled_24dp.svg'
 export default {
   name: 'Card',
   data: () => ({
